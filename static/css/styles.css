@@ -1,0 +1,126 @@
+/* fonts */
+@font-face{
+    font-family: primary;
+    src: url(../fonts/Red_Rose/RedRose-Regular.ttf);
+}
+@font-face{
+    font-family: secondary;
+    src: url(../fonts/Alata/Alata-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    cursor: pointer;
+}
+
+/* Landing section styles */
+#landing-container {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    position: relative;
+}
+#landing-content-wrap {
+    display: block;
+    width: 80%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-height: 95vh;
+    transform: translate(-50%, -50%);
+}
+#landing-name {
+    font-family: primary;
+    font-size: 10vh;
+    color: white;
+    text-shadow: 4px 3px 0px #000, 9px 8px 0px rgba(0,0,0,0.15);
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 0.15vh;
+}
+.landing-wrap {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0.15vh 0;
+}
+.tease-item {
+    font-family: secondary;
+    font-size: 4vh;
+    color: dimgray;
+    text-shadow: 2px 1px 0px #000;
+}
+.link-button {
+    display: inline-block;
+    position: relative;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-family: secondary;
+    color: white;
+    font-size: 4vh;
+    padding: 0.5vh 2vh;
+    margin: 1.25vh;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+.link-button:hover {
+    color: black;
+    border: 2px solid black;
+}
+#continue-indicator-wrap {
+    position: absolute;
+    bottom: 1vh;
+    width: 100%;
+    text-align: center;
+}
+.arrows {
+    color: white;
+    font-size: 4vh !important;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    opacity: 0;
+}
+#arrow-1 {
+    animation: indicator 3s ease-in-out infinite;
+    animation-delay: 0s;
+}
+#arrow-2 {
+    animation: indicator 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+#arrow-3 {
+    animation: indicator 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes indicator {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
